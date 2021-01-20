@@ -3,9 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/platform/channel/channel.iml" filepath="$PROJECT_DIR$/platform/channel/channel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform/common/common.iml" filepath="$PROJECT_DIR$/platform/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform/content/content.iml" filepath="$PROJECT_DIR$/platform/content/content.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform/member/member.iml" filepath="$PROJECT_DIR$/platform/member/member.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform/platform.iml" filepath="$PROJECT_DIR$/platform/platform.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform/question/question.iml" filepath="$PROJECT_DIR$/platform/question/question.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform/renren-generator/renren-generator.iml" filepath="$PROJECT_DIR$/platform/renren-generator/renren-generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform/study/study.iml" filepath="$PROJECT_DIR$/platform/study/study.iml" />
     </modules>
   </component>
