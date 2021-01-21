@@ -19,6 +19,19 @@ import lombok.Data;
 public class ViewLogEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	public ViewLogEntity() {
+	}
+
+	public ViewLogEntity(Long id, Long quesId, Long quesType, Long memberId, Integer delFlag, Date createTime, Date updateTime) {
+		this.id = id;
+		this.quesId = quesId;
+		this.quesType = quesType;
+		this.memberId = memberId;
+		this.delFlag = delFlag;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+	}
+
 	/**
 	 * id
 	 */
@@ -49,4 +62,59 @@ public class ViewLogEntity implements Serializable {
 	 */
 	private Date updateTime;
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getQuesId() {
+		return quesId;
+	}
+
+	public void setQuesId(Long quesId) {
+		this.quesId = quesId;
+	}
+
+	public Long getQuesType() {
+		return quesType;
+	}
+
+	public void setQuesType(Long quesType) {
+		this.quesType = quesType;
+	}
+
+	public Long getMemberId() {
+		return memberId;
+	}
+
+	public void setMemberId(Long memberId) {
+		this.memberId = memberId;
+	}
+
+	public Integer getDelFlag() {
+		return delFlag;
+	}
+
+	public void setDelFlag(Integer delFlag) {
+		this.delFlag = delFlag;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
 }

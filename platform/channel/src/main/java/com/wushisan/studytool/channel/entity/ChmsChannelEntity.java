@@ -19,6 +19,19 @@ import lombok.Data;
 public class ChmsChannelEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	public ChmsChannelEntity() {
+	}
+
+	public ChmsChannelEntity(Long id, String name, String appid, String appsecret, Integer delFlag, Date createTime, Date updateTime) {
+		this.id = id;
+		this.name = name;
+		this.appid = appid;
+		this.appsecret = appsecret;
+		this.delFlag = delFlag;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+	}
+
 	/**
 	 * id
 	 */
@@ -49,4 +62,59 @@ public class ChmsChannelEntity implements Serializable {
 	 */
 	private Date updateTime;
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAppid() {
+		return appid;
+	}
+
+	public void setAppid(String appid) {
+		this.appid = appid;
+	}
+
+	public String getAppsecret() {
+		return appsecret;
+	}
+
+	public void setAppsecret(String appsecret) {
+		this.appsecret = appsecret;
+	}
+
+	public Integer getDelFlag() {
+		return delFlag;
+	}
+
+	public void setDelFlag(Integer delFlag) {
+		this.delFlag = delFlag;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
 }

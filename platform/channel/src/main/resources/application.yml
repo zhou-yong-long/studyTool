@@ -7,23 +7,25 @@ spring:
         username: root
         password: 25666524qq
         driver-class-name: com.mysql.cj.jdbc.Driver
-        filters: stat
-        maxActive: 20
-        #连接池的最大值，同一时间可以从池分配的最多连接数量，0时无限制
-        initialSize: 1
-        #连接初始值，连接池启动时创建的连接数量的初始值
-        maxWait: 60000
-        minIdle: 1
-        #最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请
-        timeBetweenEvictionRunsMillis: 60000
-        minEvictableIdleTimeMillis: 300000
-        validationQuery: select 'x'
-        testWhileIdle: true
-        testOnBorrow: false
-        testOnReturn: false
-        poolPreparedStatements: true
-        #是否对已备语句进行池管理（布尔值），是否对PreparedStatement进行缓存
-        maxOpenPreparedStatements: 20
+        tomcat:
+            filters: stat
+            maxActive: 20
+            #连接池的最大值，同一时间可以从池分配的最多连接数量，0时无限制
+            initialSize: 1
+            #连接初始值，连接池启动时创建的连接数量的初始值
+            maxWait: 60000
+            minIdle: 1
+            #最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请
+            timeBetweenEvictionRunsMillis: 60000
+            minEvictableIdleTimeMillis: 300000
+            validationQuery: select 'x'
+            testWhileIdle: true
+            testOnBorrow: false
+            testOnReturn: false
+        dbcp2:
+            poolPreparedStatements: true
+                #是否对已备语句进行池管理（布尔值），是否对PreparedStatement进行缓存
+            maxOpenPreparedStatements: 20
 
     cloud:
         nacos:
@@ -34,28 +36,29 @@ spring:
         name: channel
 
     jackson:
-        date-format: yyyy-MM-dd HH:mm:ss
-        time-zone: GMT+8
+        date-format: 'yyyy-MM-dd HH:mm:ss'
+        time-zone: "GMT+8"
 
 mybatis-plus:
     mapper-locations: classpath*:mapper/**/*Mapper.xml
     #实体扫描，多个package用逗号或者分号分隔
     global-config:
-        #主键类型  auto/0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
-        id-type: auto
-        #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
-        field-strategy: 2
-        #驼峰下划线转换
-        db-column-underline: false
-        #刷新mapper 调试神器
-        refresh-mapper: true
-        #数据库大写下划线转换
-        #capital-mode: true
-        # Sequence序列接口实现类配置
-        #key-generator: com.baomidou.mybatisplus.incrementer.OracleKeyGenerator
-        #逻辑删除配置
-        logic-delete-value: 1
-        logic-not-delete-value: 0
+        db-config:
+            #主键类型  auto/0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+            id-type: auto
+            #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+            field-strategy: 2
+            #驼峰下划线转换
+            db-column-underline: false
+            #刷新mapper 调试神器
+            refresh-mapper: true
+            #数据库大写下划线转换
+            #capital-mode: true
+            # Sequence序列接口实现类配置
+            #key-generator: com.baomidou.mybatisplus.incrementer.OracleKeyGenerator
+            #逻辑删除配置
+            logic-delete-value: 1
+            logic-not-delete-value: 0
     #自定义填充策略接口实现
     #meta-object-handler: com.baomidou.springboot.xxx
     #自定义SQL注入器

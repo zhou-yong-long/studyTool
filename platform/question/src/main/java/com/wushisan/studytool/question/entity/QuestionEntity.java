@@ -19,6 +19,23 @@ import lombok.Data;
 public class QuestionEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	public QuestionEntity() {
+	}
+
+	public QuestionEntity(Long id, String title, String answer, Integer difficult, Integer displayOrder, String subTitle, Long subjectType, Integer enableShow, Integer delFlag, Date createTime, Date updateTime) {
+		this.id = id;
+		this.title = title;
+		this.answer = answer;
+		this.difficult = difficult;
+		this.displayOrder = displayOrder;
+		this.subTitle = subTitle;
+		this.subjectType = subjectType;
+		this.enableShow = enableShow;
+		this.delFlag = delFlag;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+	}
+
 	/**
 	 * id
 	 */
@@ -65,4 +82,91 @@ public class QuestionEntity implements Serializable {
 	 */
 	private Date updateTime;
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getAnswer() {
+		return answer;
+	}
+
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+
+	public Integer getDifficult() {
+		return difficult;
+	}
+
+	public void setDifficult(Integer difficult) {
+		this.difficult = difficult;
+	}
+
+	public Integer getDisplayOrder() {
+		return displayOrder;
+	}
+
+	public void setDisplayOrder(Integer displayOrder) {
+		this.displayOrder = displayOrder;
+	}
+
+	public String getSubTitle() {
+		return subTitle;
+	}
+
+	public void setSubTitle(String subTitle) {
+		this.subTitle = subTitle;
+	}
+
+	public Long getSubjectType() {
+		return subjectType;
+	}
+
+	public void setSubjectType(Long subjectType) {
+		this.subjectType = subjectType;
+	}
+
+	public Integer getEnableShow() {
+		return enableShow;
+	}
+
+	public void setEnableShow(Integer enableShow) {
+		this.enableShow = enableShow;
+	}
+
+	public Integer getDelFlag() {
+		return delFlag;
+	}
+
+	public void setDelFlag(Integer delFlag) {
+		this.delFlag = delFlag;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
 }

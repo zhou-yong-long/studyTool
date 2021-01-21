@@ -19,6 +19,19 @@ import lombok.Data;
 public class TypeEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	public TypeEntity() {
+	}
+
+	public TypeEntity(Long id, String subjectType, String comments, String logoUrl, Integer delFlag, Date createTime, Date updateTime) {
+		this.id = id;
+		this.subjectType = subjectType;
+		this.comments = comments;
+		this.logoUrl = logoUrl;
+		this.delFlag = delFlag;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+	}
+
 	/**
 	 * id
 	 */
@@ -49,4 +62,59 @@ public class TypeEntity implements Serializable {
 	 */
 	private Date updateTime;
 
+	public String getSubjectType() {
+		return subjectType;
+	}
+
+	public void setSubjectType(String subjectType) {
+		this.subjectType = subjectType;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getComments() {
+		return comments;
+	}
+
+	public void setComments(String comments) {
+		this.comments = comments;
+	}
+
+	public String getLogoUrl() {
+		return logoUrl;
+	}
+
+	public void setLogoUrl(String logoUrl) {
+		this.logoUrl = logoUrl;
+	}
+
+	public Integer getDelFlag() {
+		return delFlag;
+	}
+
+	public void setDelFlag(Integer delFlag) {
+		this.delFlag = delFlag;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
 }

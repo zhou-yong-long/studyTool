@@ -19,6 +19,22 @@ import lombok.Data;
 public class BannerEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	public BannerEntity() {
+	}
+
+	public BannerEntity(Long id, String imgUrl, String title, Integer displayOrder, Integer enableShow, Integer renderType, String renderUrl, Integer delFlag, Date createTime, Date updateTime) {
+		this.id = id;
+		this.imgUrl = imgUrl;
+		this.title = title;
+		this.displayOrder = displayOrder;
+		this.enableShow = enableShow;
+		this.renderType = renderType;
+		this.renderUrl = renderUrl;
+		this.delFlag = delFlag;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+	}
+
 	/**
 	 * id
 	 */
@@ -61,4 +77,83 @@ public class BannerEntity implements Serializable {
 	 */
 	private Date updateTime;
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getImgUrl() {
+		return imgUrl;
+	}
+
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Integer getDisplayOrder() {
+		return displayOrder;
+	}
+
+	public void setDisplayOrder(Integer displayOrder) {
+		this.displayOrder = displayOrder;
+	}
+
+	public Integer getEnableShow() {
+		return enableShow;
+	}
+
+	public void setEnableShow(Integer enableShow) {
+		this.enableShow = enableShow;
+	}
+
+	public Integer getRenderType() {
+		return renderType;
+	}
+
+	public void setRenderType(Integer renderType) {
+		this.renderType = renderType;
+	}
+
+	public String getRenderUrl() {
+		return renderUrl;
+	}
+
+	public void setRenderUrl(String renderUrl) {
+		this.renderUrl = renderUrl;
+	}
+
+	public Integer getDelFlag() {
+		return delFlag;
+	}
+
+	public void setDelFlag(Integer delFlag) {
+		this.delFlag = delFlag;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
 }

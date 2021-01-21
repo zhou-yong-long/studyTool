@@ -19,6 +19,19 @@ import lombok.Data;
 public class ChmsAccessTokenEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	public ChmsAccessTokenEntity() {
+	}
+
+	public ChmsAccessTokenEntity(Long id, String accessToken, Date expireTime, Long channelId, Integer delFlag, Date createTime, Date updateTime) {
+		this.id = id;
+		this.accessToken = accessToken;
+		this.expireTime = expireTime;
+		this.channelId = channelId;
+		this.delFlag = delFlag;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+	}
+
 	/**
 	 * id
 	 */
@@ -49,4 +62,59 @@ public class ChmsAccessTokenEntity implements Serializable {
 	 */
 	private Date updateTime;
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getAccessToken() {
+		return accessToken;
+	}
+
+	public void setAccessToken(String accessToken) {
+		this.accessToken = accessToken;
+	}
+
+	public Date getExpireTime() {
+		return expireTime;
+	}
+
+	public void setExpireTime(Date expireTime) {
+		this.expireTime = expireTime;
+	}
+
+	public Long getChannelId() {
+		return channelId;
+	}
+
+	public void setChannelId(Long channelId) {
+		this.channelId = channelId;
+	}
+
+	public Integer getDelFlag() {
+		return delFlag;
+	}
+
+	public void setDelFlag(Integer delFlag) {
+		this.delFlag = delFlag;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
 }

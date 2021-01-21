@@ -19,6 +19,21 @@ import lombok.Data;
 public class NewsEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	public NewsEntity() {
+	}
+
+	public NewsEntity(Long id, String imageUrl, String title, Integer displayOrder, String renderUrl, Integer enableShow, Integer delFlag, Date createTime, Date updateTime) {
+		this.id = id;
+		this.imageUrl = imageUrl;
+		this.title = title;
+		this.displayOrder = displayOrder;
+		this.renderUrl = renderUrl;
+		this.enableShow = enableShow;
+		this.delFlag = delFlag;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+	}
+
 	/**
 	 * id
 	 */
@@ -57,4 +72,75 @@ public class NewsEntity implements Serializable {
 	 */
 	private Date updateTime;
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Integer getDisplayOrder() {
+		return displayOrder;
+	}
+
+	public void setDisplayOrder(Integer displayOrder) {
+		this.displayOrder = displayOrder;
+	}
+
+	public String getRenderUrl() {
+		return renderUrl;
+	}
+
+	public void setRenderUrl(String renderUrl) {
+		this.renderUrl = renderUrl;
+	}
+
+	public Integer getEnableShow() {
+		return enableShow;
+	}
+
+	public void setEnableShow(Integer enableShow) {
+		this.enableShow = enableShow;
+	}
+
+	public Integer getDelFlag() {
+		return delFlag;
+	}
+
+	public void setDelFlag(Integer delFlag) {
+		this.delFlag = delFlag;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
 }
