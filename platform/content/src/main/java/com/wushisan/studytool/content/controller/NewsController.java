@@ -6,11 +6,7 @@ import java.util.Map;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.wushisan.studytool.content.entity.NewsEntity;
 import com.wushisan.studytool.content.service.NewsService;
@@ -26,6 +22,7 @@ import utils.R;
  * @email 809545115@qq.com
  * @date 2021-01-20 10:52:35
  */
+@CrossOrigin
 @RestController
 @RequestMapping("content/news")
 public class NewsController {

@@ -6,11 +6,7 @@ import java.util.Map;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.wushisan.studytool.question.entity.QuestionEntity;
 import com.wushisan.studytool.question.service.QuestionService;
@@ -26,6 +22,7 @@ import utils.R;
  * @email 809545115@qq.com
  * @date 2021-01-20 17:43:14
  */
+@CrossOrigin
 @RestController
 @RequestMapping("question/question")
 public class QuestionController {
